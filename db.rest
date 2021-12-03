@@ -1,0 +1,52 @@
+GET http://localhost:3000/recipies
+
+### 
+POST http://localhost:3000/recipies
+content-type: application/json
+
+{
+    "plant": "Spinach",
+    "growth_time_days": 52,
+    "temp_lowerlimit": 12,
+    "temp_upperlimit": 12,
+    "humidity_lowerlimit": 10,
+    "humidity_upperlimit": 10,
+    "ppm_lowerlimit": 1260,
+    "ppm_upperlimit": 1610,
+    "ph_lowerlimit": 15,
+    "ph_upperlimit": 15,
+    "light_schedule_cron": "0 */12 * * *",
+    "motor_schedule_cron": "30 * * * *",
+    "motor_schedule_on_time_mins": 10,
+    "camera_interval_mins": 10
+}
+
+### 
+GET http://localhost:3000/sensors
+
+### 
+POST http://localhost:3000/sensors
+content-type: application/json
+
+{
+    "temp_value":10,
+    "humidity_value":10,
+    "ec_value": 12,
+    "ph_value": 12,
+    "tds_value": 10,
+    "cpu_temp_value": 10
+}
+
+### 
+GET http://localhost:3000/activity
+
+### 
+POST http://localhost:3000/activity
+content-type: application/json
+
+{
+    "type":"lights",
+    "value": true
+}
+
+###
